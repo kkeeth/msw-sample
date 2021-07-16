@@ -1,23 +1,54 @@
 {
+  "name": "msw-test",
+  "description": "This repository is a direct implementation of the procedure described in this Japanese article.",
+  "main": "index.js",
   "version": "0.0.0",
+  "keywords": [
+    "riotjs",
+    "msw",
+    "sample"
+  ],
+  "author": "k-kuwahara <zensin0082@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "build": "webpack -c --mode production",
+    "cov": "nyc report --reporter=text-lcov | coveralls",
+    "cov-html": "nyc report --reporter=html",
+    "prepublishOnly": "npm test",
+    "start": "webpack-dev-server --inline --watch --hot --colors -d --port 3000",
+    "test": "nyc --require esm --require jsdom-global/register --require @riotjs/register mocha src/**/*.spec.js"
   },
   "dependencies": {
-    "vue": "^3.0.5"
+    "@riotjs/hot-reload": "^5.0.0",
+    "@riotjs/lazy": "^1.1.0",
+    "@riotjs/route": "^7.0.0",
+    "riot": "^5.0.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.2.5",
-    "@vue/compiler-sfc": "^3.0.5",
+    "@riotjs/compiler": "^5.0.0",
+    "@riotjs/register": "^5.0.0",
+    "@riotjs/webpack-loader": "^5.0.0",
+    "chai": "^4.2.0",
+    "esm": "^3.2.25",
+    "jsdom": "^16.2.2",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^8.2.1",
     "msw": "^0.32.0",
+    "nyc": "^15.1.0",
     "prettier": "^2.3.2",
-    "typescript": "^4.3.2",
-    "vite": "^2.4.2",
-    "vue-tsc": "^0.0.24"
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "msw": {
     "workerDirectory": "public"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkeeth/msw-sample.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kkeeth/msw-sample/issues"
+  },
+  "homepage": "https://github.com/kkeeth/msw-sample#readme"
 }
