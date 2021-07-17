@@ -6,5 +6,11 @@ import registerGlobalComponents from './register-global-components'
 // register
 registerGlobalComponents()
 
+// msw
+if (process.env.NODE_ENV === 'development') {
+  const { worker } = require('./mocks/browser')
+  worker.start()
+}
+
 // mount the root tag
 component(App)(document.getElementById('root'))
