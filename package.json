@@ -8,7 +8,7 @@
     "msw",
     "sample"
   ],
-  "author": "k-kuwahara <zensin0082@gmail.com>",
+  "author": "kkeeth <zensin0082@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "webpack -c --mode production",
@@ -20,7 +20,6 @@
   },
   "dependencies": {
     "@riotjs/hot-reload": "^5.0.0",
-    "@riotjs/lazy": "^1.1.0",
     "@riotjs/route": "^7.0.0",
     "riot": "^5.0.0"
   },
