@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@riotjs/hot-reload": "^5.0.0",
+    "@riotjs/lazy": "^2.0.1",
     "@riotjs/route": "^7.0.0",
     "riot": "^5.0.0"
   },

@@ -939,10 +939,12 @@
   dependencies:
     bianco.query "^1.0.0"
 
-"@riotjs/lazy@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@riotjs/lazy/-/lazy-1.1.0.tgz#6d79ff3bcc05de96bef0d4c9dac525b8722f2887"
-  integrity sha512-TCUTnc8NkX3LOc6wsEL1t0ddeKv+OirU9Bf8X0DH5/rSdTAMxREdPLT5Xx2mHshDEO09nXLazOl8nbT7Yy11cQ==
+"@riotjs/lazy@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@riotjs/lazy/-/lazy-2.0.1.tgz#760629ef7abfcfc6d98c4979b2041787e59a8d14"
+  integrity sha512-ks5LMRK7SIthsW+3bshvF3c+OC2OJjzO6K3E8/pT7/2ChU/LS3huAo0OlfaFss4hE9Dq8r9K8iPs8k9NNmIqpw==
+  dependencies:
+    "@riotjs/util" "^2.0.4"
 
 "@riotjs/parser@^4.3.1":
   version "4.3.1"
